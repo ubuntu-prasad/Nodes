@@ -1,0 +1,6 @@
+Flask==1.0.2
+requests==2.11.1
+grpcio==1.17.1
+firebase_admin==2.14.0
+protobuf==3.6.1
+gunicorn==19.9.0
