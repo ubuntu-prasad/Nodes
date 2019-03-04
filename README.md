@@ -17,7 +17,7 @@ This is a REST API for a Photo Sharing Network. Work as a middle server between 
     * Leave
 
 ## Security
-##### Application Secuirty
+##### Application Security
 All application logic of your app will be handled inside this Flask REST API, which you need to deploy on a server. So ability to bypass application logic is very low. 
 
 - Here are already included basic rules
@@ -32,8 +32,66 @@ All application logic of your app will be handled inside this Flask REST API, wh
         * Add comments
         * Get connected users
     <br>
-    
-        if user haven't join the Node
+    if user hasn't join the Node
 
-##### Data Secuirty
+##### Data Security
 * Save photos in Firebase storage with public read and write access, but listing is denied. 
+
+## API
+
+### User Signup
+Create a new user
+
+* **URL**
+
+  /user/signup
+
+* **Method:**
+
+  `POST`
+  
+
+* **Data Params**
+
+    `email=[email]` <br>
+    `password=[password]`
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="Create New User", status="SUCCESS", uid=uid, id_token=id_token, refresh_token=refresh_token }`
+ 
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
+
+
+### User Login
+Login a registered user
+
+* **URL**
+
+  /user/login
+
+* **Method:**
+
+  `POST`
+  
+
+* **Data Params**
+
+    `email=[email]` <br>
+    `password=[password]`
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="login user", status="SUCCESS", id_token=id_token, refresh_token=refresh_token,registered=registered }`
+ 
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
