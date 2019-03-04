@@ -6,15 +6,24 @@
     * <b>[Application Security](#application-security)</b>
     * <b>[Data Security](#data-security)</b>
 - <b>[API Documentation](#api-documentation)</b>
-    * <b>[User Signup](#user-signup)</b>
-    * <b>[User Login](#user-login)</b>
-    * <b>[User Token Verify](#user-token-verify)</b>
-    * <b>[Connected Nodes](#connected-nodes)</b>
-    * <b>[Set User FCM Token](#set-user-fcm-token)</b>
-    * <b>[Connected Nodes](#connected-nodes-1)</b>
-    * <b>[Update profile](#update-profile)</b>
-    * <b>[Get profile](#get-profile)</b>
-    * <b>[Get Notifications](#get-notifications)</b>
+    - Users
+        * <b>[User Signup](#user-signup)</b>
+        * <b>[User Login](#user-login)</b>
+        * <b>[User Token Verify](#user-token-verify)</b>
+        * <b>[Connected Nodes](#connected-nodes)</b>
+        * <b>[Set User FCM Token](#set-user-fcm-token)</b>
+        * <b>[Connected Nodes](#connected-nodes-1)</b>
+        * <b>[Update profile](#update-profile)</b>
+        * <b>[Get profile](#get-profile)</b>
+        * <b>[Get Notifications](#get-notifications)</b>
+    - Nodes
+        * <b>[Create Node](#create-node)</b>
+        * <b>[Search Nodes](#search-nodes)</b>
+        * <b>[Check Node Availability](#check-node-availability)</b>
+        * <b>[Add Photos](#add-photos)</b>
+        * <b>[Get Photos](#get-photos)</b>
+        * <b>[Join Node](#join-node)</b>
+        * <b>[Leave Node](#leave-node)</b>
 
 
 ## What is this?
@@ -321,3 +330,255 @@ Get avaiable notifications for user
 
   * Code: 200 <br />
     Content: `{ status : "FAILED" }`
+
+
+
+
+### Create Node
+Create a new Node
+
+* **URL**
+
+  /node/create
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+    `node_name=[node_name]`<br>
+    `profile_pic=[profile_pic]`<br>
+    `node_description=[node_description]`<br>   
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ stauts="SUCCESS", operation="Create a new node" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`    
+
+
+### Search Nodes
+Search Nodes
+
+* **URL**
+
+  /node/search
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `search_name=[search_name]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ matched_names=<[node_names]>, operation="search nodes",status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`    
+
+
+### Check Node Availability
+Check the availability of a Node
+
+* **URL**
+
+  /node/checkAvailability
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `search_name=[search_name]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ is_available=<is_available>, operation="search nodes",status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`   
+
+
+### Add Photos
+Add photos to a Node
+
+* **URL**
+
+  /node/addPosts
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+    `node_name=[node_name]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="Add posts to a node", status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }` or
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="Add posts to a node", status="FAILED", reason="unauthorized access" }`
+
+
+### Get Photos
+Get photos of a Node
+
+* **URL**
+
+  /node/getPosts
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+    `node_name=[node_name]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ posts=<[node_posts]>, status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }` or
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ status="FAILED", reason="unauthorized access" }`
+
+
+### Join Node
+Join a Node
+
+* **URL**
+
+  /node/join
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+    `node_name=[node_name]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="JOINED", status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status="FAILED", operation="Join request send",reason="ALREADY_REQUESTED" }` or
+
+  * Code: 200 <br />
+    Content: `{ status="FAILED", operation="Join request send",reason="ALREADY_JOINED" }` or
+    
+  * Code: 200 <br />
+    Content: <br>
+    `{ status="FAILED"}`
+
+
+### Leave Node
+Leave a Node
+
+* **URL**
+
+  /node/leave
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+    `node_name=[node_name]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="Leave from a node", status="SUCCESS" }`
+
+* **Error Response:**
+    
+  * Code: 200 <br />
+    Content: <br>
+    `{ status="FAILED"}`
+
+
+### Leave Node
+Leave a Node
+
+* **URL**
+
+  /node/leave
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+    `node_name=[node_name]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="Leave from a node", status="SUCCESS" }`
+
+* **Error Response:**
+    
+  * Code: 200 <br />
+    Content: <br>
+    `{ status="FAILED"}`
+
