@@ -95,3 +95,210 @@ Login a registered user
 
   * Code: 200 <br />
     Content: `{ status : "FAILED" }`
+
+
+### User Token Verify
+Verify id_token of a user
+
+* **URL**
+
+  /user/tokenVerify
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]` <br>
+    `refresh_token=[refresh_token]`
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="Verify User ID_TOKEN", status="SUCCESS" }`
+    or
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operation="Verify User ID_TOKEN", status="RENEWED", id_token=new_id_token }`
+
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
+
+### Connected Nodes
+Get user connected Nodes
+
+* **URL**
+
+  /user/connectedNodes
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ connected_nodes = <node_list>, status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
+
+
+### Set User FCM Token
+Set user Firebase cloud messaging token
+
+* **URL**
+
+  /user/setFCMToken'
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+    `fcm_token=[fcm_token]`
+
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operaion="set FCM token", status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
+
+
+### Connected Nodes
+Get user connected Nodes
+
+* **URL**
+
+  /user/connectedNodes
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ connected_nodes = <node_list>, status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
+
+
+### Update profile
+Update user profile info
+
+* **URL**
+
+  /user/profileInfo/update
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+    `full_name=[full_name]`<br>
+    `profile_pic=[profile_pic]`
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ operaion="Update user details", status="SUCCESS" }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
+
+
+
+### Get profile 
+Get user profile info
+
+* **URL**
+
+  /user/profileInfo/get
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ status="SUCCESS", operation="Get user details" full_name=full_name, profile_pic=profile_pic }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
+
+
+### Get Notifications
+Get avaiable notifications for user
+
+* **URL**
+
+  /user/getNotifications
+
+* **Method:**
+
+  `GET`
+  
+
+* **URL Params**
+
+    `id_token=[id_token]`<br>
+
+* **Success Response:**
+
+  * Code: 200 <br />
+    Content: <br>
+    `{ stauts="SUCCESS", operation="get user notifications", notificaions=<notificaions> }`
+
+* **Error Response:**
+
+  * Code: 200 <br />
+    Content: `{ status : "FAILED" }`
