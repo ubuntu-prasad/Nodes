@@ -1,8 +1,6 @@
-<br/>
 <div align="center">
-    <br />
     <img src="https://github.com/I2NhbmloZWxweW91/Nodes/blob/master/pics/header.png" alt="Header Image"/>
-    <h3>Nodes::Photo Sharing Network Middleware</h3>
+    <h3>Nodes - Photo Sharing Network Middleware</h3>
 </div>
 
 
