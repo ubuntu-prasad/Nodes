@@ -3,6 +3,9 @@
     <h3>Nodes - Photo Sharing Network Middleware</h3>
 </div>
 
+<div align="center">
+You can find Ionic App repository [here](https://github.com/I2NhbmloZWxweW91/Nodes_App)
+</div>
 
 ## Table of contents
 
