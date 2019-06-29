@@ -1,6 +1,6 @@
 language: python
 # command to install dependencies
 install:
-  - pip install -r requirements.txt
+  - pip install -r ./src/requirements.txt
 # command to run tests
-script: python main.py
+script: python ./src/main.py
