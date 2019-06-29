@@ -10,7 +10,7 @@
 #   ^^^ ''   ^^^                       #
 #--------------------------------------#
 # MIDDLE SERVER FOR NODES              #
-# By h3xora                            #
+# By HD Dananjaya                      #
 #--------------------------------------#                               
 
 from google.cloud import firestore
@@ -42,6 +42,10 @@ SERVER_CONFIG = {
     #
 }
 
+# Check API keys
+if (len(WEB_API_KEY) == 0 or len(SERVER_CONFIG) == 0):
+    print ("Incorrect WEB_API_KEY, SERVER_CONFIG")
+    exit(0)
 
 # initialized using secret json
 print ("- - - app init - - - ")
