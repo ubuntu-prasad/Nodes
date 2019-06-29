@@ -1,3 +1,11 @@
+<br/>
+<div align="center">
+    <br />
+    <img src="https://github.com/I2NhbmloZWxweW91/Nodes/blob/master/pics/header.png" alt="Header Image" width="300"/>
+    <h3>Nodes::Photo Sharing Network Middleware</h3>
+</div>
+
+
 ## Table of contents
 
 - <b>[What is this?](#what-is-this)</b>
