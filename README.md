@@ -8,37 +8,6 @@ You can find Ionic App repository here </br>
 https://github.com/I2NhbmloZWxweW91/Nodes_App
 </div>
 
-## Table of contents
-
-- <b>[What is this?](#what-is-this)</b>
-- <b>[Features](#features)</b>
-- <b>[Security](#security)</b>
-    * <b>[Application Security](#application-security)</b>
-    * <b>[Data Security](#data-security)</b>
-- <b>[API Documentation](#api-documentation)</b>
-    - Users
-        * <b>[User Signup](#user-signup)</b>
-        * <b>[User Login](#user-login)</b>
-        * <b>[User Token Verify](#user-token-verify)</b>
-        * <b>[Connected Nodes](#connected-nodes)</b>
-        * <b>[Set User FCM Token](#set-user-fcm-token)</b>
-        * <b>[Connected Nodes](#connected-nodes-1)</b>
-        * <b>[Update profile](#update-profile)</b>
-        * <b>[Get profile](#get-profile)</b>
-        * <b>[Get Notifications](#get-notifications)</b>
-    - Nodes
-        * <b>[Create Node](#create-node)</b>
-        * <b>[Search Nodes](#search-nodes)</b>
-        * <b>[Check Node Availability](#check-node-availability)</b>
-        * <b>[Add Photos](#add-photos)</b>
-        * <b>[Get Photos](#get-photos)</b>
-        * <b>[Join Node](#join-node)</b>
-        * <b>[Leave Node](#leave-node)</b>
-        * <b>[Delete All Photos](#delete-all-photos)</b>
-        * <b>[Accept Request](#accept-request)</b>
-        * <b>[Get Node users](#get-node-users)</b>
-        * <b>[Add Comments](#Add-Comments)</b>
-
 ## What is this?
 This is a REST API for a Photo Sharing Network. Work as a middle server between backend and frontend application. Uses Firebase services as the backend (Firestore NoSQL database, authentication and storage). Initial project was deployed in Google AppEngine. With NoSQL database, database structure is extremly flexible. So you can customize as wish. The whole purpose of this project is to give a quick startup to your app idea. Feel free to leave a Star if you enjoy.
 
@@ -79,6 +48,29 @@ All application logic of your app will be handled inside this Flask REST API, wh
 Save photos in Firebase storage with public read and write access, but listing is denied. 
 
 ## API Documentation
+
+- Users
+    * <b>[User Signup](#user-signup)</b>
+    * <b>[User Login](#user-login)</b>
+    * <b>[User Token Verify](#user-token-verify)</b>
+    * <b>[Connected Nodes](#connected-nodes)</b>
+    * <b>[Set User FCM Token](#set-user-fcm-token)</b>
+    * <b>[Connected Nodes](#connected-nodes-1)</b>
+    * <b>[Update profile](#update-profile)</b>
+    * <b>[Get profile](#get-profile)</b>
+    * <b>[Get Notifications](#get-notifications)</b>
+- Nodes
+    * <b>[Create Node](#create-node)</b>
+    * <b>[Search Nodes](#search-nodes)</b>
+    * <b>[Check Node Availability](#check-node-availability)</b>
+    * <b>[Add Photos](#add-photos)</b>
+    * <b>[Get Photos](#get-photos)</b>
+    * <b>[Join Node](#join-node)</b>
+    * <b>[Leave Node](#leave-node)</b>
+    * <b>[Delete All Photos](#delete-all-photos)</b>
+    * <b>[Accept Request](#accept-request)</b>
+    * <b>[Get Node users](#get-node-users)</b>
+    * <b>[Add Comments](#Add-Comments)</b>
 
 ### User Signup
 Create a new user
