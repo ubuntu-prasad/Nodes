@@ -4,7 +4,8 @@
 </div>
 
 <div align="center">
-You can find Ionic App repository [here](https://github.com/I2NhbmloZWxweW91/Nodes_App)
+You can find Ionic App repository here </br>
+https://github.com/I2NhbmloZWxweW91/Nodes_App
 </div>
 
 ## Table of contents
