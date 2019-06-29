@@ -1,7 +1,14 @@
 language: python
-install:
+before_install:
   - cd src
+install:
   - pip install -r requirements.txt
 script:
-  - cd src
   - python main.py
+
+# install:
+#   - cd src
+#   - pip install -r requirements.txt
+# script:
+#   - cd src
+#   - python main.py
